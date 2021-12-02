@@ -117,7 +117,7 @@ footer.footer .copyright {
 }
 
 section#hero {
-  height: 100vh;
+  height: 90vh;
 }
 section#hero .wrapper {
   display: flex;
@@ -144,4 +144,10 @@ section#prize {
   background: url("/assets/prizebg.png") no-repeat center/contain;
   height: 100vh;
   position: relative;
+}
+section#prize .wrapper .title {
+  font-size: 5.2rem;
+  color: #552100;
+  text-align: center;
+  font-weight: 700;
 }

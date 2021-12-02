@@ -13,7 +13,9 @@
   </section>
 
   <section id="prize">
-
+    <div class="wrapper">
+        <p class="title">Торопись! В игре осталось:</p>
+    </div>
   </section>
 @endsection
 
