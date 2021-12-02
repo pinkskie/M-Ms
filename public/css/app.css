@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap);
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  color: white;
+  background-color: #ffcc00;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 1599px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 8px;
+  }
+}
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 120rem;
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 90vmin;
+  }
+}
+
+header.header {
+  box-shadow: 0px 0px 25px 1px black;
+}
+header.header .container {
+  width: 120rem;
+}
+header.header .wrapper {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+header.header .wrapper .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header.header .wrapper .nav .btn-danger {
+  font-size: 2.8rem;
+  border-radius: 1rem;
+  background-color: #ff000a;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+}
+header.header .wrapper .nav .nav-link {
+  color: #532f1c;
+  font-size: 2.8rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+header.header .wrapper .nav .nav-link a:hover {
+  color: #532f1c;
+}
+
+footer.footer {
+  background: url("/assets/footerbg.png");
+}
+footer.footer .content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.4rem;
+}
+footer.footer .nav {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+}
+footer.footer .nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+footer.footer .copyright {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+section#hero {
+  height: 100vh;
+}
+section#hero .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#hero .wrapper .title {
+  color: #532f1c;
+  font-size: 6rem;
+}
+section#hero .wrapper .btn-danger {
+  width: 32rem;
+  height: 8rem;
+  font-size: 4.4rem;
+  background-color: #ff000a;
+  border-radius: 1.8rem;
+  outline: none;
+  border: none;
+  box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, 0.7);
+}
+
+section#prize {
+  background: url("/assets/prizebg.png") no-repeat center/contain;
+  height: 100vh;
+  position: relative;
+}

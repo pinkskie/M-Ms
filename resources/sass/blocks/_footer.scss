@@ -1,0 +1,28 @@
+footer.footer {
+    background: url("/assets/footerbg.png");
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.4rem;
+    }
+    .nav {
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+    }
+    .copyright {
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+}

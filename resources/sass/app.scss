@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+    width: 100vw;
+    max-width:100%;
+    color: white;
+    background-color: #ffcc00;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+h2 {
+    margin: 0;
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 1599px) {
+    html{
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    html{
+        font-size: 8px;
+    }
+    body{
+        //overflow-x: scroll;
+    }
+}
+
+@mixin responsive {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin notMobile {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 120rem;
+    @include responsive{
+        width: 90vmin;
+    }
+}
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/hero";
+@import "blocks/prize";
