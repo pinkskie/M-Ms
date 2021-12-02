@@ -33,6 +33,13 @@ p {
   margin: 0;
 }
 
+.title {
+  font-size: 5.2rem;
+  color: #552100;
+  text-align: center;
+  font-weight: 700;
+}
+
 @media only screen and (max-width: 1599px) {
   html {
     font-size: 9px;
@@ -124,10 +131,7 @@ section#hero .wrapper {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-section#hero .wrapper .title {
-  color: #532f1c;
-  font-size: 6rem;
+  margin-top: 5rem;
 }
 section#hero .wrapper .btn-danger {
   width: 32rem;
@@ -144,10 +148,80 @@ section#prize {
   background: url("/assets/prizebg.png") no-repeat center/contain;
   height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
 }
-section#prize .wrapper .title {
-  font-size: 5.2rem;
+section#prize .container {
+  margin-top: 5rem;
+}
+section#prize .container .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section#prize .container .content .prizes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#prize .container .content .prizes .amount {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  gap: 1rem;
+  width: 23rem;
+  height: 7.7rem;
+  background-color: #ff0009;
+  border-radius: 1rem;
+  border: 1px solid white;
+}
+section#prize .container .content .prizes .amount .size {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+section#prize .container .content .prizes .amount span {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+}
+section#prize .container .content .prizes .prize_img {
+  max-height: 27rem;
+}
+section#prize .container .content .prizes .prize_name {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #552100;
+  text-transform: uppercase;
+}
+
+section#share .container .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#share .container .info .content {
+  border: 1px solid white;
+  width: 30rem;
+  height: 25rem;
+}
+section#share .container .info .content .share_img {
+  width: 100%;
+}
+section#share .container .scan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#share .container .scan .scan_img {
+  max-width: 30rem;
+}
+section#share .container .scan .attention {
+  font-size: 3.2rem;
+  text-transform: uppercase;
   color: #552100;
   text-align: center;
-  font-weight: 700;
 }

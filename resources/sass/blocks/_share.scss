@@ -1,0 +1,36 @@
+section#share {
+  .container {
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .content {
+        border: 1px solid white;
+        width: 30rem;
+          height: 25rem;
+        .share_img {
+          width: 100%;
+        }
+      }
+      
+    }
+    .scan {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     
+       
+        .scan_img {
+          max-width: 30rem;
+        }
+      
+      .attention {
+        font-size: 3.2rem;
+        // font-weight: 700;
+        text-transform: uppercase;
+        color: #552100;
+        text-align: center;
+      }
+    }
+  }
+}

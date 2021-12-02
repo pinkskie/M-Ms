@@ -2,12 +2,53 @@ section#prize {
     background: url("/assets/prizebg.png") no-repeat center/contain;
     height: 100vh;
     position: relative;
-    .wrapper {
-        .title {
-            font-size: 5.2rem;
-            color: #552100;
-            text-align: center;
-            font-weight: 700;
+    display: flex;
+    align-items: center;
+    .container {
+        margin-top: 5rem;
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .prizes {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .amount {
+                    margin-top: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 3rem;
+                    gap: 1rem;
+                    width: 23rem;
+                    height: 7.7rem;
+                    background-color: #ff0009;
+                    border-radius: 1rem;
+                    border: 1px solid white;
+                    .size {
+                        font-size: 3.2rem;
+                        font-weight: 700;
+                    }
+                    span {
+                        text-transform: uppercase;
+                        padding: 0;
+                        margin: 0;
+                        font-weight: 700;
+                    }
+                }
+                .prize_img {
+                    max-height: 27rem;
+                }
+                .prize_name {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    color: #552100;
+                    text-transform: uppercase;
+                }
+                
+            }
         }
     }
 }
