@@ -4,6 +4,13 @@ section#prize {
     position: relative;
     display: flex;
     align-items: center;
+    position: relative;
+    .frame {
+        position: absolute;
+        top:8rem ;
+        z-index: -1;
+        width: 100%;
+    }
     .container {
         margin-top: 5rem;
         .content {
@@ -15,29 +22,6 @@ section#prize {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                .amount {
-                    margin-top: 4rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    padding-right: 3rem;
-                    gap: 1rem;
-                    width: 23rem;
-                    height: 7.7rem;
-                    background-color: #ff0009;
-                    border-radius: 1rem;
-                    border: 1px solid white;
-                    .size {
-                        font-size: 3.2rem;
-                        font-weight: 700;
-                    }
-                    span {
-                        text-transform: uppercase;
-                        padding: 0;
-                        margin: 0;
-                        font-weight: 700;
-                    }
-                }
                 .prize_img {
                     max-height: 27rem;
                 }
@@ -47,7 +31,6 @@ section#prize {
                     color: #552100;
                     text-transform: uppercase;
                 }
-                
             }
         }
     }

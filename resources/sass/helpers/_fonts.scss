@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'EBA-DINPro-CondensedBlack';
+    src: url("/fonts/DINPro-CondensedBlack.woff2") format('woff2'),
+    url("/fonts/DINPro-CondensedBlack.woff") format('woff'),
+    url("/fonts/DINPro-CondensedBlack.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EBA-DINPro-CondensedBold';
+    src: url('/fonts/DINPro-CondensedBold.woff2') format('woff2'),
+    url('/fonts/DINPro-CondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EBA-DINPro-CondensedMedium';
+    src:  url('/fonts/DINPro-CondensedMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}

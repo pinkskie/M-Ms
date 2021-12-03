@@ -1,29 +1,71 @@
 section#share {
+    position: relative;
   .container {
     .info {
       display: flex;
       align-items: center;
       justify-content: space-between;
       .content {
+        margin-top: 3rem;
         border: 1px solid white;
-        width: 30rem;
-          height: 25rem;
-        .share_img {
-          width: 100%;
+        width: 38rem;
+        height: 27rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        .share_img_1 {
+            width: 100%;
+            position: relative;
+            top: 2rem;
+            left: 2rem;
+        }
+        .share_img_2 {
+            width: 70%;
+            position: relative;
+            left: 2rem;
+            top: 2rem;
+        }
+        .share_img_3 {
+            width: 70%;
+            position: relative;
+            left: 6rem;
+            top: 1.33rem;
+        }
+        .description {
+            background-color: #FFF;
+            color: #552100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 9rem;
+            position: relative;
+            bottom: 10.6rem;
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 0 1rem;
+        }
+        .description.description-2 {
+            bottom: 3.4rem;
+        }
+        .description.description-3 {
+            bottom: 8.2rem;
+            z-index: -1;
         }
       }
-      
     }
     .scan {
       display: flex;
       align-items: center;
       justify-content: space-between;
-     
-       
+      margin: 3rem 0;
+        position: relative;
+        padding: 4rem;
         .scan_img {
-          max-width: 30rem;
+          max-width: 25rem;
         }
-      
       .attention {
         font-size: 3.2rem;
         // font-weight: 700;
@@ -31,6 +73,83 @@ section#share {
         color: #552100;
         text-align: center;
       }
+        .arrow_left {
+            position: absolute;
+            bottom: -5rem;
+            left: 14%;
+            z-index: 2;
+        }
+        .arrow_right {
+            position: absolute;
+            bottom: -5rem;
+            right: 14%;
+            z-index: 2;
+
+        }
     }
+    .info_2 {
+          display: flex;
+          justify-content: center;
+          gap: 2.5rem;
+          .content {
+              border: 1px solid white;
+              width: 42rem;
+              height: 27rem;
+              position: relative;
+              overflow: hidden;
+              border-radius: 1rem;
+              .share_img_4 {
+                  width: 70%;
+                  position: relative;
+                  left: 4rem;
+                  top: 2rem;
+              }
+              .share_img_5 {
+                  width: 100%;
+                  position: relative;
+              }
+              .description {
+                  background-color: #FFF;
+                  color: #552100;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 100%;
+                  height: 10.5rem;
+                  position: relative;
+                  bottom: 16.2rem;
+                  text-align: center;
+                  font-size: 2rem;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  padding: 0 1rem;
+              }
+              .description.description-4 {
+                  bottom: 13.2rem;
+              }
+              .description.description-5 {
+                  bottom: 13rem;
+              }
+          }
+      }
+    .btn-danger {
+      width: 32rem;
+      height: 8rem;
+      font-size: 4.4rem;
+      background-color: #ff000a;
+      border-radius: 1.8rem;
+      outline: none;
+      border: none;
+      box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, .7);
+      display: block;
+      margin: 4rem auto;
+     }
+  }
+  .frame {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    display: flex;
+    justify-content: center;;
   }
 }
