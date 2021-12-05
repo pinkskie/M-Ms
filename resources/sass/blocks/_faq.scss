@@ -7,12 +7,47 @@ section#FAQ {
         text-align: center;
         max-width: 119rem;
     }
+    .faq.active .answer {
+        max-height: 30rem;
+    }
+    .question  {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        svg {
+            transform: rotate(-90deg);
+        }
+        h3 {
+            color:#532f1c;
+            font-size: 2.6rem;
+            font-weight: 700;
+        }
+    }
+    .faq {
+        max-width: 86.5rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+        cursor: pointer;
+    }
+    .answer {
+        max-height: 0;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        p {
+            color: #532f1c;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-left: 5.4rem;
+            margin-bottom: 2rem;
+        }
+    }
     .form {
         display: flex;
         flex-direction: column;
         align-items: center;
         max-width: 86.5rem;
         margin: 0 auto;
+        margin-top: 2rem;
         .user {
             display: flex;
             justify-content: space-between;

@@ -13,7 +13,7 @@
   </section>
 
   <section id="prize">
-      <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="295.19" viewBox="0 0 1920 295.19" class="frame">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="295.19" viewBox="0 0 1920 295.19" class="frame">
           <defs>
               <style>
                   .cls-1 {
@@ -23,7 +23,7 @@
               </style>
           </defs>
           <path id="Rectangle_1_copy_2" data-name="rectangle" class="cls-1" d="M-18,712l978.8,86.068L1942,712v295.2H-18V712Z" transform="translate(0 -712)"/>
-      </svg>
+      </svg> -->
 
       <div class="container">
       <h2 class="title">Торопись! В игре осталось:</h2>
@@ -218,17 +218,56 @@
               бязательно поможем. Не забудь написать мобильный, который
               у казал при регистрации!
           </p>
-          <form class="form" id="form-question">
-              <div class="user">
-                  <input type="text" name="name" placeholder="Имя" inputmode="text"/>
-                  <input type="tel" name="phone" placeholder="Номер телефона" inputmode="tel"/>
-                  <input type="email" name="email" placeholder="E-mail" inputmode="text"/>
-              </div>
-              <textarea form="form-question" name="question" placeholder="Напиши свой вопрос"></textarea>
-              <div class="btn">
-                  <button class="btn btn-danger">Отправить</button>
-              </div>
-          </form>
+          <div class="faq">
+            <div class="question">
+              <img src="/assets/M&MS.png" alt='M&MS' />
+              <h3>Когда можно играть?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
+                <defs>
+                <style>
+                  .cls-1 {
+                    fill: #532f1c;
+                    fill-rule: evenodd;
+                  }
+                </style>
+                </defs>
+                <path id="last_page_copy_3" data-name="last_page copy 3" class="cls-1" d="M776.729,4064.77a0.542,0.542,0,0,0,.356-0.15l7.214-7.05a0.5,0.5,0,0,0,.154-0.34,0.524,0.524,0,0,0-.154-0.35l-0.774-.76a0.5,0.5,0,0,0-.712,0l-6.084,5.95-6.083-5.95a0.5,0.5,0,0,0-.712,0l-0.774.76a0.521,0.521,0,0,0-.155.35,0.5,0.5,0,0,0,.155.34l7.213,7.05A0.542,0.542,0,0,0,776.729,4064.77Zm0,5.81a0.542,0.542,0,0,0,.356-0.15l7.214-7.05a0.524,0.524,0,0,0,.154-0.35,0.545,0.545,0,0,0-.154-0.35l-0.774-.75a0.5,0.5,0,0,0-.712,0l-6.084,5.94-6.083-5.94a0.5,0.5,0,0,0-.712,0l-0.774.75a0.541,0.541,0,0,0-.155.35,0.521,0.521,0,0,0,.155.35l7.213,7.05A0.542,0.542,0,0,0,776.729,4070.58Z" transform="translate(-769 -4055.97)"/></svg> 
+            </div>
+            <div class="answer">
+              <p>Акция проводится с 13 июля по 05 сентября 2021 года</p> 
+            </div>
+          </div>
+           
+
+          <div class="faq">
+            <div class="question">
+              <img src="/assets/M&MS.png" alt='M&MS' />
+              <h3>Когда можно играть?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
+                <defs>
+                <style>
+                  .cls-1 {
+                    fill: #532f1c;
+                    fill-rule: evenodd;
+                  }
+                </style>
+                </defs>
+                <path id="last_page_copy_3" data-name="last_page copy 3" class="cls-1" d="M776.729,4064.77a0.542,0.542,0,0,0,.356-0.15l7.214-7.05a0.5,0.5,0,0,0,.154-0.34,0.524,0.524,0,0,0-.154-0.35l-0.774-.76a0.5,0.5,0,0,0-.712,0l-6.084,5.95-6.083-5.95a0.5,0.5,0,0,0-.712,0l-0.774.76a0.521,0.521,0,0,0-.155.35,0.5,0.5,0,0,0,.155.34l7.213,7.05A0.542,0.542,0,0,0,776.729,4064.77Zm0,5.81a0.542,0.542,0,0,0,.356-0.15l7.214-7.05a0.524,0.524,0,0,0,.154-0.35,0.545,0.545,0,0,0-.154-0.35l-0.774-.75a0.5,0.5,0,0,0-.712,0l-6.084,5.94-6.083-5.94a0.5,0.5,0,0,0-.712,0l-0.774.75a0.541,0.541,0,0,0-.155.35,0.521,0.521,0,0,0,.155.35l7.213,7.05A0.542,0.542,0,0,0,776.729,4070.58Z" transform="translate(-769 -4055.97)"/></svg> 
+            </div>
+            <div class="answer">
+              <form class="form" id="form-question">
+                  <div class="user">
+                      <input type="text" name="name" placeholder="Имя" inputmode="text"/>
+                      <input type="tel" name="phone" placeholder="Номер телефона" inputmode="tel"/>
+                      <input type="email" name="email" placeholder="E-mail" inputmode="text"/>
+                  </div>
+                  <textarea form="form-question" name="question" placeholder="Напиши свой вопрос"></textarea>
+                  <div class="btn">
+                      <button class="btn btn-danger">Отправить</button>
+                  </div>
+              </form>
+            </div>
+                </div>
       </div>
   </section>
 @endsection

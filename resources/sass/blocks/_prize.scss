@@ -1,5 +1,8 @@
 section#prize {
-    background: url("/assets/prizebg.png") no-repeat center/contain;
+    background-image: url("/assets/prizebg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 100vh;
     position: relative;
     display: flex;
@@ -32,6 +35,19 @@ section#prize {
                     text-transform: uppercase;
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: 562px) {
+    section#prize {
+        margin-top: 27rem !important;
+        .container {
+            .content {
+                flex-direction: column !important;
+            }
+        }
+        .frame {
+            
         }
     }
 }

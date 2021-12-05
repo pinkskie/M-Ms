@@ -7,7 +7,12 @@
   \*****************************/
 /***/ (() => {
 
-// require('./bootstrap');
+var faqs = document.querySelectorAll('.faq');
+faqs.forEach(function (faq) {
+  faq.addEvenListener('click', function () {
+    faq.classList.toggle('active');
+  });
+});
 
 /***/ }),
 
