@@ -2,7 +2,7 @@
     <div class="container">
         <div class="wrapper">
             <div class="content">
-                <p class="info">Лови M&M’s® с 1 июля по ХХ сентября 2021 года</p>
+                <p class="info"><span>Лови M&M’s®</span> с 1 июля по ХХ сентября 2021 года</p>
                 <p class="info">Телефон горячей линии: 8 800 XXX XX XX</p>
             </div>
             <div class="nav">

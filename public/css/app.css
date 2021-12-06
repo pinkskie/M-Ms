@@ -117,8 +117,8 @@ header.header .container {
 }
 header.header .wrapper {
   padding: 1rem 0;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 header.header .wrapper .nav {
   display: flex;
@@ -126,7 +126,7 @@ header.header .wrapper .nav {
   justify-content: space-between;
 }
 header.header .wrapper .nav .btn-danger {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   border-radius: 1rem;
   background-color: #ff000a;
   text-transform: uppercase;
@@ -135,7 +135,7 @@ header.header .wrapper .nav .btn-danger {
 }
 header.header .wrapper .nav .nav-link {
   color: #532f1c;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   cursor: pointer;
   font-weight: 700;
 }
@@ -175,6 +175,42 @@ footer.footer .copyright {
   padding-bottom: 1rem;
 }
 
+@media screen and (max-width: 562px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+    font-size: 2.1rem !important;
+    font-weight: 700;
+    gap: 2rem !important;
+  }
+  .content .info {
+    line-height: normal;
+  }
+  .content .info span {
+    width: 100%;
+    display: block;
+  }
+
+  .nav {
+    order: 2;
+  }
+  .nav ul {
+    flex-wrap: wrap !important;
+    padding: 0 !important;
+    gap: 0 0.5rem !important;
+    font-weight: 700;
+  }
+
+  .copyright {
+    font-size: 1.5rem !important;
+    margin-top: 2rem !important;
+  }
+}
 section#hero {
   height: 83vh;
 }
@@ -197,7 +233,7 @@ section#hero .wrapper .btn-danger {
 }
 
 section#prize {
-  background-image: url("/assets/prizebg.png");
+  background-image: url("/assets/prizebg2.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -243,6 +279,15 @@ section#prize .container .content .prizes .prize_name {
   }
   section#prize .container .content {
     flex-direction: column !important;
+  }
+  section#prize .prize_1 {
+    max-height: 24rem !important;
+  }
+  section#prize .prize_3 {
+    max-height: 35rem !important;
+  }
+  section#prize .prize_name {
+    font-size: 2.7rem !important;
   }
 }
 @media screen and (max-width: 562px) {
