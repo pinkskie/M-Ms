@@ -24,15 +24,43 @@ section#prize {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                gap: 3rem;
                 align-items: center;
+                position: relative;
+                &:last-child {
+                    gap: 1rem;
+                }
+                .change_prize {
+                    animation: VR 10s infinite;
+                }
                 .prize_img {
-                    max-height: 27rem;
+                    height: 25rem;
+                }
+                .prize_img.prize_3 {
+                    height: 31rem;
+                    margin-bottom: 4rem;
                 }
                 .prize_name {
                     font-size: 3.2rem;
                     font-weight: 700;
                     color: #552100;
                     text-transform: uppercase;
+                }
+                .prize_name_3 {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    color: #fff254;
+                    background-color: #7f3489;
+                    padding: 0 2.5rem;
+                    transform: skew(14deg , -10deg);
+                    position: absolute;
+                    bottom: 2rem;
+                }
+                .product {
+                    position: absolute;
+                    bottom: 0;
+                    color: #552100;
+                    right: 0;
                 }
             }
         }
@@ -58,5 +86,16 @@ section#prize {
         .frame {
 
         }
+    }
+}
+@keyframes VR {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

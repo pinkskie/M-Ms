@@ -16,14 +16,15 @@
       <link href="{{ mix('css/app.css') }}" rel="stylesheet"/>
       <style>
           body {
-              font-family: 'Roboto Condensed', sans-serif;
+              font-family: 'EBA-DINPro-CondensedBold', sans-serif;
           }
       </style>
   </head>
   <body>
-    @yield('header')
+    @include('partials.header')
     @yield('content')
-    @yield('footer')
+    @include('partials.footer')
+    <script src="{{ mix('js/app.js') }}"></script>
 
   </body>
 </html>

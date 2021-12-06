@@ -36,6 +36,11 @@
 }
 section#share {
     position: relative;
+    .sharebg {
+        position: absolute;
+        width: 100%;
+        top: 15rem;
+    }
   .container {
     .info {
       display: flex;
@@ -56,16 +61,51 @@ section#share {
             left: 2rem;
         }
         .share_img_2 {
-            width: 70%;
+            width: 40%;
             position: relative;
-            left: 2rem;
+            left: 12rem;
             top: 2rem;
+            animation: phone 15s infinite;
+            animation-delay: 2s;
+        }
+        .green_phone_candy {
+            position: absolute;
+            z-index: 2;
+            top: 5rem;
+            left: 17rem;
+            animation: candy_green 9s infinite;
+            animation-delay: 1s;
+
+        }
+        .blue_phone_candy {
+            position: absolute;
+            z-index: 2;
+            top: 2rem;
+            left: 5rem;
+            animation: blue_candy 7s infinite;
+            animation-delay: 4s;
         }
         .share_img_3 {
             width: 70%;
             position: relative;
             left: 6rem;
             top: 1.33rem;
+        }
+        .red_static {
+            position: absolute;
+            height: 10rem;
+            z-index: 3;
+            bottom: 6.5rem;
+            left: 7rem;
+        }
+        .yellow_static {
+            position: absolute;
+            height: 10rem;
+            right: 5rem;
+            top: 3rem;
+            z-index: 3;
+            transform-origin: center center;
+            transform: skew(348deg, 19deg);
         }
         .description {
             background-color: #FFF;
@@ -84,7 +124,7 @@ section#share {
             padding: 0 1rem;
         }
         .description.description-2 {
-            bottom: 3.4rem;
+            bottom: 1.9rem;
         }
         .description.description-3 {
             bottom: 8.2rem;
@@ -92,7 +132,9 @@ section#share {
         }
       }
     }
-    
+    .block {
+
+    }
     .scan {
       display: flex;
       align-items: center;
@@ -135,6 +177,9 @@ section#share {
               position: relative;
               overflow: hidden;
               border-radius: 1rem;
+              &:last-child {
+                  overflow: inherit;
+              }
               .share_img_4 {
                   width: 70%;
                   position: relative;
@@ -143,7 +188,39 @@ section#share {
               }
               .share_img_5 {
                   width: 100%;
+                  height: 99.9%;
                   position: relative;
+              }
+              .share5_1 {
+                  position: absolute;
+                  z-index: 5 ;
+                  max-width: 17rem;
+                  left: 3rem;
+                  top: 3rem;
+                  animation: shake 1s infinite;
+              }
+              .share5_2 {
+                  position: absolute;
+                  z-index: 5;
+                  max-width: 17rem;
+                  right: -1rem;
+                  top: -2rem;
+                  animation: bober 1s infinite;
+              }
+              .share5_3 {
+                  position: absolute;
+                  z-index: 5;
+                  top: -.8rem;
+                  left: 3rem;
+                  max-width: 3.5rem;
+                  animation: note2x 1s infinite;
+              }
+              .share5_4 {
+                  position: absolute;
+                  max-width: 3.5rem;
+                  top: 5rem;
+                  left: 20rem;
+                  animation: note 1s infinite;
               }
               .description {
                   background-color: #FFF;
@@ -162,10 +239,11 @@ section#share {
                   padding: 0 1rem;
               }
               .description.description-4 {
-                  bottom: 13.2rem;
+                  bottom: 13rem;
               }
               .description.description-5 {
-                  bottom: 13rem;
+                  bottom: 10.6rem;
+                  border-radius: 0 0 1rem 1rem;
               }
           }
       }
@@ -189,4 +267,101 @@ section#share {
     display: flex;
     justify-content: center;;
   }
+}
+@keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+@keyframes bober {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes note {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-50deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes note2x {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes candy_green {
+    0% {
+        opacity: 1;
+    }
+    8% {
+        transform: translateY(9.5rem);
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+
+    }
+}
+@keyframes blue_candy {
+    0% {
+
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(12rem);
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(12rem);
+        opacity: 0;
+    }
+}
+@keyframes phone {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-12rem);
+    }
+    20% {
+        transform: translateX(-12rem);
+    }
+    35% {
+        transform: translateX(10rem);
+    }
+    40% {
+        transform: translateX(10rem);
+    }
+    50% {
+        transform: translateX(0);
+    }
 }

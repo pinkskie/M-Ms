@@ -1,9 +1,5 @@
 @extends('layouts.main')
 
-@section('header')
-  @include('partials.header')
-@endsection
-
 @section('content')
   <section id="hero">
       <div class="wrapper">
@@ -29,24 +25,38 @@
       <h2 class="title">Торопись! В игре осталось:</h2>
       <div class="content">
           <div class="prizes">
-              <p class="amount-1"><span class="size">5880</span><span> желтых <br/>призов</span></p>
+              <p class="amount-1">
+                  <img src="/assets/icons/animations/yellow_anim.png" alt="" class="yellow_anim"/>
+                  <span class="size">5880</span><span> желтых <br/>призов</span>
+              </p>
               <img src="/assets/prize1.png" alt="prize1" class="prize_img prize_1"/>
               <p class="prize_name">Эл.сертификат IVI 3 месяца</p>
           </div>
           <div class="prizes">
-              <p class="amount-2"><span class="size">7</span><span> красных <br/>m-призов</span></p>
+              <p class="amount-2">
+                  <span class="size">7</span><span> красных <br/>m-призов</span>
+                  <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>
+              </p>
               <img src="/assets/prize2.png" alt="prize2" class="prize_img prize_2"/>
               <p class="prize_name">Смартфон или наушники </p>
           </div>
-          <div class="prizes">
-              <p class="amount-2"><span class="size">7</span><span> красных <br/>s-призов</span></p>
-              <img src="/assets/prize3.png" alt="prize3" class="prize_img prize_3"/>
+          <div class="prizes prize_3">
+              <p class="amount-2">
+                  <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>
+                  <span class="size">7</span><span> красных <br/>s-призов</span>
+              </p>
+              <div class="change_prize">
+                  <img src="/assets/prize3.png" alt="prize3" class="prize_img prize_3"/>
+                  <p class="prize_name_3">Радужные глаза* </p>
+                  <span class="product">*Playstation VR</span>
+              </div>
           </div>
       </div>
     </div>
   </section>
 
   <section id="share">
+      <img src="/assets/sharebg.png" alt="" class="sharebg"/>
     <div class="container">
       <h2 class='title'>Хочу призов! что делать? </h2>
       <div class="info">
@@ -57,18 +67,23 @@
           </p>
         </div>
         <div class="content">
-          <img src="/assets/share2.png" alt="share1" class="share_img_2"/>
+            <img src="/assets/green_phone_c.png" alt="" class="green_phone_candy"/>
+            <img src="/assets/blue_phone_c.png" alt="" class="blue_phone_candy"/>
+          <img src="/assets/share2.png" alt="share2" class="share_img_2"/>
             <p class="description description-2">
                 НЕ УПУСкай ЖЕЛТЫЕ ПРИЗОВЫЕ КОНФЕТЫ НА 2 И 3 УРОВНЯХ
             </p>
         </div>
         <div class="content">
+          <img src="/assets/icons/animations/red_static.png" alt="" class="red_static">
+          <img src="/assets/icons/animations/yellow_static.png" alt="" class="yellow_static"/>
           <img src="/assets/share3.png" alt="share1" class="share_img_3"/>
             <p class="description description-3">
                 ХОЧЕШЬ СУПЕРПРИЗОВ? ВЫБИРАЙ S ИЛИ M, ПРОЙДИ КОНТРОЛЬ И ЛОВИ!
             </p>
         </div>
       </div>
+      <div class="block">
       <div class="scan">
           <img src="/assets/scan_yellow.png" alt="scan1" class="scan_img"/>
           <img src="/assets/arrow_left.png" alt="arrow_left" class="arrow_left"/>
@@ -85,10 +100,15 @@
           </div>
           <div class="content">
             <img src="/assets/share5.png" alt="share5" class="share_img_5"/>
-              <p class="description description-5">
-                  КРАСНЫЙ призовой SKITTLES® – ЭТО СУПЕРПРИЗ! ЛОВИ, ВНУТРИ АУДИБОБЕР* ИЛИ РАДУЖНЫЕ ГЛАЗА**!
-              </p>
+            <img src="/assets/icons/animations/share5_1.png" alt="" class="share5_1"/>
+            <img src="/assets/icons/animations/share5_2.png" alt="" class="share5_2"/>
+            <img src="/assets/icons/animations/share5_3.png" alt="" class="share5_3"/>
+            <img src="/assets/icons/animations/share5_4.png" alt="" class="share5_4"/>
+            <p class="description description-5">
+              КРАСНЫЙ призовой SKITTLES® – ЭТО СУПЕРПРИЗ! ЛОВИ, ВНУТРИ АУДИБОБЕР* ИЛИ РАДУЖНЫЕ ГЛАЗА**!
+            </p>
           </div>
+      </div>
       </div>
       <button class="btn btn-danger">ПОГНАЛИ!</button>
     </div>
@@ -106,6 +126,7 @@
   </section>
 
   <section id="winners">
+      <img src="/assets/winnersbg.png" alt="" class="winnersbg"/>
     <div class="container">
         <p class="title">Победители</p>
         <form class="form form_search">
@@ -121,9 +142,11 @@
         <div class="table">
             <div class="table_nav">
                 <div class="winners yellow">
+                    <img src="/assets/icons/animations/yellow_anim.png" alt="" class="yellow_anim"/>
                     Желтые призы
                 </div>
                 <div class="winners red">
+                    <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>
                     Красные призы
                 </div>
             </div>
@@ -201,9 +224,18 @@
         </div>
         <p class="title">Торопись! В игре осталось:</p>
         <div class="prizes">
-            <p class="amount-1"><span class="size">5880</span><span> желтых <br/>призов</span></p>
-            <p class="amount-2"><span class="size">5880</span><span> желтых <br/>призов</span></p>
-            <p class="amount-2"><span class="size">5880</span><span> желтых <br/>призов</span></p>
+            <p class="amount-1">
+                <img src="/assets/icons/animations/yellow_anim.png" alt="" class="yellow_anim"/>
+                <span class="size">5880</span><span> желтых <br/>призов</span>
+            </p>
+            <p class="amount-2">
+                <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>
+                <span class="size">7</span><span> красных <br/>призов</span>
+            </p>
+            <p class="amount-2">
+                <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>
+                <span class="size">7</span><span> красных <br/>призов</span>
+            </p>
         </div>
         <button class="btn btn-danger">ПОГНАЛИ!</button>
     </div>
@@ -238,11 +270,51 @@
             </div>
           </div>
 
+          <div class="faq">
+              <div class="question">
+                  <img src="/assets/M&MS.png" alt='M&MS' />
+                  <h3>Как можно выиграть смартфон?</h3>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
+                      <defs>
+                          <style>
+                              .cls-1 {
+                                  fill: #532f1c;
+                                  fill-rule: evenodd;
+                              }
+                          </style>
+                      </defs>
+                      <path id="last_page_copy_3" data-name="last_page copy 3" class="cls-1" d="M776.729,4064.77a0.542,0.542,0,0,0,.356-0.15l7.214-7.05a0.5,0.5,0,0,0,.154-0.34,0.524,0.524,0,0,0-.154-0.35l-0.774-.76a0.5,0.5,0,0,0-.712,0l-6.084,5.95-6.083-5.95a0.5,0.5,0,0,0-.712,0l-0.774.76a0.521,0.521,0,0,0-.155.35,0.5,0.5,0,0,0,.155.34l7.213,7.05A0.542,0.542,0,0,0,776.729,4064.77Zm0,5.81a0.542,0.542,0,0,0,.356-0.15l7.214-7.05a0.524,0.524,0,0,0,.154-0.35,0.545,0.545,0,0,0-.154-0.35l-0.774-.75a0.5,0.5,0,0,0-.712,0l-6.084,5.94-6.083-5.94a0.5,0.5,0,0,0-.712,0l-0.774.75a0.541,0.541,0,0,0-.155.35,0.521,0.521,0,0,0,.155.35l7.213,7.05A0.542,0.542,0,0,0,776.729,4070.58Z" transform="translate(-769 -4055.97)"/></svg>
+              </div>
+              <div class="answer">
+                  <p>Никак )))</p>
+              </div>
+          </div>
+
+          <div class="faq">
+              <div class="question">
+                  <img src="/assets/M&MS.png" alt='M&MS' />
+                  <h3>Что еще можно выиграть?</h3>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
+                      <defs>
+                          <style>
+                              .cls-1 {
+                                  fill: #532f1c;
+                                  fill-rule: evenodd;
+                              }
+                          </style>
+                      </defs>
+                      <path id="last_page_copy_3" data-name="last_page copy 3" class="cls-1" d="M776.729,4064.77a0.542,0.542,0,0,0,.356-0.15l7.214-7.05a0.5,0.5,0,0,0,.154-0.34,0.524,0.524,0,0,0-.154-0.35l-0.774-.76a0.5,0.5,0,0,0-.712,0l-6.084,5.95-6.083-5.95a0.5,0.5,0,0,0-.712,0l-0.774.76a0.521,0.521,0,0,0-.155.35,0.5,0.5,0,0,0,.155.34l7.213,7.05A0.542,0.542,0,0,0,776.729,4064.77Zm0,5.81a0.542,0.542,0,0,0,.356-0.15l7.214-7.05a0.524,0.524,0,0,0,.154-0.35,0.545,0.545,0,0,0-.154-0.35l-0.774-.75a0.5,0.5,0,0,0-.712,0l-6.084,5.94-6.083-5.94a0.5,0.5,0,0,0-.712,0l-0.774.75a0.541,0.541,0,0,0-.155.35,0.521,0.521,0,0,0,.155.35l7.213,7.05A0.542,0.542,0,0,0,776.729,4070.58Z" transform="translate(-769 -4055.97)"/></svg>
+              </div>
+              <div class="answer">
+                  <p>Ничего )))</p>
+              </div>
+          </div>
+
 
           <div class="faq">
             <div class="question">
               <img src="/assets/M&MS.png" alt='M&MS' />
-              <h3>Когда можно играть?</h3>
+              <h3>Не нашел ответ? Задай вопрос нам!</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
                 <defs>
                 <style>
@@ -272,8 +344,5 @@
   </section>
 @endsection
 
-@section('footer')
-    @include('partials.footer')
-@endsection
 
 

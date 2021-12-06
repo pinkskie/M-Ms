@@ -1,5 +1,14 @@
 section#winners {
     position: relative;
+
+    .winnersbg {
+        position: absolute;
+        width: 95%;
+        top: 15%;
+        left: 1%;
+        margin:0 auto;
+    }
+
     .container {
         .form {
             margin: 4rem auto;
@@ -15,7 +24,7 @@ section#winners {
                 input {
                     font-size: 3.2rem;
                     margin-bottom: unset;
-                    padding: 1.1rem 4rem;
+                    padding: 1.1rem 6rem;
                     width: 85%;
                     border-radius: 1rem;
                     }
@@ -69,10 +78,23 @@ section#winners {
                 .winners.yellow {
                     color: #552100;
                     background-color: #ffcc00;
+                    position: relative;
+
+                    .yellow_anim {
+                        height: 14rem;
+                        position: absolute;
+                        left: 0;
+                    }
                 }
                 .winners.red {
                     color: #fff;
                     background-color: #ff0009;
+                    position: relative;
+                    .red_anim {
+                        height: 12rem;
+                        position: absolute;
+                        left: 0;
+                    }
                 }
             }
             .table_head {
@@ -93,6 +115,7 @@ section#winners {
                 border-right: 1px solid white;
                 border-left: 1px solid white;
                 position: relative;
+                margin-bottom: 10rem;
                 .table_body {
                     .rows {
                         display: flex;
@@ -116,11 +139,12 @@ section#winners {
             font-size: 4.3rem;
         }
         .prizes {
-            max-width: 74rem;
+            max-width: 86.5rem;
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
         }
         .btn-danger {
             width: 32rem;
