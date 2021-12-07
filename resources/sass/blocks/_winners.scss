@@ -1,6 +1,11 @@
 section#winners {
     position: relative;
+    width: 100%;
 
+
+    .title {
+        margin-top: 10rem;
+    }
     .winnersbg {
         position: absolute;
         width: 95%;
@@ -8,7 +13,6 @@ section#winners {
         left: 1%;
         margin:0 auto;
     }
-
     .container {
         .form {
             margin: 4rem auto;
@@ -75,10 +79,17 @@ section#winners {
                     height: 7rem;
 
                 }
+                .winners.yellow.active {
+                    border-bottom: 1px solid white;
+                }.winners.red.active {
+                    border-bottom: 1px solid white;
+                }
                 .winners.yellow {
                     color: #552100;
                     background-color: #ffcc00;
                     position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
 
                     .yellow_anim {
                         height: 14rem;
@@ -90,6 +101,8 @@ section#winners {
                     color: #fff;
                     background-color: #ff0009;
                     position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
                     .red_anim {
                         height: 12rem;
                         position: absolute;
@@ -135,6 +148,12 @@ section#winners {
                 }
             }
         }
+        .lentils {
+            position: absolute;
+            max-width: 10rem;
+            right: 4rem;
+            bottom: 30rem;
+        }
         .title {
             font-size: 4.3rem;
         }
@@ -163,6 +182,50 @@ section#winners {
 @media screen and (max-width: 562px) {
     section#winners {
         font-size: 0.5vmin  !important;
+        .container {
+            .table {
+                width: 100% !important;
+                .table_data {
+                    .table_body {
+                        .rows {
+                            div {
+                                &:nth-child(3) {
+                                    display: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                .table_head{
+                   div {
+                       &:nth-child(3) {
+                           display: none !important;
+                       }
+                   }
+                }
+                .table_nav {
+                    .winners {
+                        font-size: 2rem !important;
+                        padding-left: 4rem;
+                        width: 19.8rem !important;
+                    }
+                    .yellow_anim {
+                        left: -2.5rem !important;
+                        height: 11rem !important;
+                    }
+                }
+            }
+            .prizes {
+                flex-wrap: wrap;
+                justify-content: center !important;
+                gap: 3rem;
+                &:first-child {
+                    width: 100%;
+                }
+
+            }
+
+        }
         .yellow_img {
             display: none !important;
         }

@@ -1,0 +1,204 @@
+section#profile {
+    background-color: #ffcc00;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    .wrapper {
+        max-width: 86.5rem;
+    }
+    .title {
+        font-size: 3.5rem;
+    }
+    .user   {
+        .name {
+            font-size: 2.8rem;
+            margin-left: 1rem;
+            color: #552100;
+        }
+        .btn-danger {
+            padding: 0.5rem 3rem;
+            font-size: 4.4rem;
+            background-color: #ff000a;
+            border-radius: 1.8rem;
+            outline: none;
+            border: none;
+            box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, .7);
+            display: block;
+            margin: 1rem auto;
+            text-transform: uppercase;
+            margin-bottom: 5.7rem;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 13rem;
+            height: 10rem;
+            left: 0;
+            z-index: 1;
+            background: url('/assets/frame.png') center center/ cover no-repeat;
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        align-items: center;
+        margin-bottom: 5rem;
+        .prizes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            &:last-child {
+                gap: 1rem;
+            }
+            .amount-1 {
+                max-width: 18rem;
+                max-height: 5.3rem;
+                padding-right: 2rem;
+                .yellow_anim {
+                    max-width: 14rem;
+                    left: -6rem;
+                }
+            }
+            .amount-2 {
+                max-width: 13rem;
+                max-height: 5.3rem;
+                padding-right: 1rem;
+                .red_anim {
+                    max-width: 11rem;
+                    left: -5rem;
+                }
+            }
+            .change_prize_VR {
+                animation: VR 10s infinite;
+                animation-delay: 3s;
+            }
+            .change_prize_bober {
+                position: absolute;
+                top: 11rem;
+                animation: BOBER 10s infinite;
+                animation-delay: 3s;
+                opacity: 0;
+
+            }
+            .prize_img {
+                height: 18rem;
+            }
+            .prize_img.prize_3 {
+                height: 24rem;
+                margin-bottom: 4rem;
+            }
+            .prize_name {
+                font-size: 3.2rem;
+                font-weight: 700;
+                color: #552100;
+                text-transform: uppercase;
+            }
+            .prize_name_3 {
+                font-size: 3.2rem;
+                font-weight: 700;
+                color: #fff254;
+                background-color: #7f3489;
+                padding: 0 2.5rem;
+                transform: skew(14deg , -10deg);
+                position: absolute;
+                bottom: 2rem;
+            }
+            .product {
+                position: absolute;
+                bottom: 0;
+                color: #552100;
+                right: 0;
+            }
+        }
+    }
+
+    .user_2 {
+        line-height: 3.5rem;
+        margin-top: 3rem;
+        .name {
+            font-size: 2.8rem;
+            color: #552100;
+            text-align: center;
+        }
+    }
+    .profile_table {
+        position: relative;
+        margin-bottom: 2rem;
+        .profile_table_head {
+            display: grid;
+            grid-template-columns: 6% 16% 40%;
+            font-size: 2rem;
+            gap: 5rem;
+            justify-content: center;
+            color: #552100;
+            text-transform: uppercase;
+            margin: 2rem 0 1rem 0;
+            margin-left: 2rem;
+
+        }
+        .rows {
+            padding: 1rem 0;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 8% 12% 12% 30% 30%;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+            width: 100%;
+            color: #552100;
+            text-transform: uppercase;
+            border-top: 1px solid white;
+            .yellow_static {
+                max-width: 10rem;
+                max-height: 6rem;
+            }
+            .day {
+                //width: 10rem;
+            }
+            .time {
+                //width: 10rem;
+
+            }
+            .info {
+                //width: 23rem;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .prize {
+                text-transform: initial;
+                //width: 20rem;
+            }
+        }
+    }
+    .btn-danger {
+        padding: 0.3rem 5rem;
+        font-size: 4.4rem;
+        background-color: #ff000a;
+        border-radius: 1.8rem;
+        outline: none;
+        border: none;
+        box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, .7);
+        display: block;
+        margin: 1rem auto;
+        text-transform: uppercase;
+        margin-bottom: 2.7rem;
+    }
+
+    .content-2 {
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+}

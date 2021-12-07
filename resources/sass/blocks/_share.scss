@@ -1,6 +1,10 @@
 @media screen and (max-width: 562px) {
   section#share {
     margin-top: 40rem !important;
+
+      .title {
+          margin-top: 2rem;
+      }
     .container {
       display: flex;
       flex-direction: column;
@@ -8,6 +12,15 @@
   }
   .info {
     flex-direction: column !important;
+      .share_img_3 {
+          left: 1rem !important;
+      }
+      .red_static {
+          left: 8rem !important;
+      }
+      .yellow_static {
+          right: 4rem !important;
+      }
   }
   .scan {
     flex-direction: column !important;
@@ -36,6 +49,17 @@
 }
 section#share {
     position: relative;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 10rem;
+        bottom: -8rem;
+        left: 0;
+        z-index: 2;
+        background: url('/assets/frame.png') center center/ cover no-repeat;
+    }
     .sharebg {
         position: absolute;
         width: 100%;
@@ -65,15 +89,15 @@ section#share {
             position: relative;
             left: 12rem;
             top: 2rem;
-            animation: phone 15s infinite;
-            animation-delay: 2s;
+            animation: phone 8s infinite;
+            animation-delay: 3s;
         }
         .green_phone_candy {
             position: absolute;
             z-index: 2;
             top: 5rem;
             left: 17rem;
-            animation: candy_green 9s infinite;
+            animation: candy_green 7s infinite;
             animation-delay: 1s;
 
         }
@@ -84,6 +108,22 @@ section#share {
             left: 5rem;
             animation: blue_candy 7s infinite;
             animation-delay: 4s;
+        }
+        .anim_phone_candy {
+            position: absolute;
+            max-width: 5.5rem;
+            top: 1rem;
+            right: 4rem;
+            animation: anim_candy 6s infinite;
+            animation-delay: 6s;
+        }
+        .gift {
+            position: absolute;
+            bottom: 8rem;
+            z-index: 5;
+            right: 1.5rem;
+            animation: gift 3s infinite;
+            animation-delay: 2s;
         }
         .share_img_3 {
             width: 70%;
@@ -260,13 +300,7 @@ section#share {
       margin: 4rem auto;
      }
   }
-  .frame {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    display: flex;
-    justify-content: center;;
-  }
+
 }
 @keyframes shake {
     0% {
@@ -312,6 +346,14 @@ section#share {
         transform: rotate(0deg);
     }
 }
+@keyframes gift {
+    10% {transform: rotate(10deg)}
+    15% {transform: rotate(-10deg)}
+    20% {transform: rotate(10deg)}
+    25% {transform: rotate(-10deg)}
+    30% {transform: rotate(10deg)}
+    35% {transform: rotate(0)}
+}
 @keyframes candy_green {
     0% {
         opacity: 1;
@@ -333,35 +375,32 @@ section#share {
 
         opacity: 1;
     }
-    20% {
-        transform: translateY(12rem);
+    15% {
+        transform: translateY(12.3rem);
         opacity: 1;
     }
-    25% {
+    18% {
         opacity: 0;
     }
     100% {
-        transform: translateY(12rem);
         opacity: 0;
     }
+
+}
+@keyframes anim_candy {
+    0% {opacity: 1}
+    15% {
+        transform: translateY(12.5rem);
+        opacity: 1;
+    }
+    18% {opacity: 0;}
+    100% {opacity: 0}
 }
 @keyframes phone {
-    0% {
-        transform: translateX(0);
-    }
-    10% {
-        transform: translateX(-12rem);
-    }
-    20% {
-        transform: translateX(-12rem);
-    }
-    35% {
-        transform: translateX(10rem);
-    }
-    40% {
-        transform: translateX(10rem);
-    }
-    50% {
-        transform: translateX(0);
-    }
+    0% {transform: translateX(0)}
+    20% {transform: translateX(-12rem)}
+    45% {transform: translateX(-12rem)}
+    55% {transform: translateX(12rem)}
+    75% {transform: translateX(12rem)}
+    85% {transform: translateX(0)}
 }

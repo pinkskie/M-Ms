@@ -8,6 +8,17 @@
 /***/ (() => {
 
 var faqs = document.querySelectorAll('.faq');
+var winner_yellow = document.querySelector('.yellow');
+var winner_red = document.querySelector('.red');
+console.log(winner_yellow);
+winner_yellow = addEventListener('click', function () {
+  winner_yellow.classList.add('active');
+  winner_red.classList.remove('active');
+});
+winner_red = addEventListener('click', function () {
+  winner_red.classList.add('active');
+  winner_yellow.classList.remove('active');
+});
 faqs.forEach(function (faq) {
   faq.addEventListener('click', function () {
     faq.classList.toggle('active');

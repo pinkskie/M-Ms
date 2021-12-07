@@ -8,12 +8,6 @@ section#prize {
     display: flex;
     align-items: center;
     position: relative;
-    .frame {
-        position: absolute;
-        top:8rem ;
-        z-index: -1;
-        width: 100%;
-    }
     .container {
         margin-top: 5rem;
         .content {
@@ -30,8 +24,17 @@ section#prize {
                 &:last-child {
                     gap: 1rem;
                 }
-                .change_prize {
+                .change_prize_VR {
                     animation: VR 10s infinite;
+                    animation-delay: 3s;
+                }
+                .change_prize_bober {
+                    position: absolute;
+                    top: 11rem;
+                    animation: BOBER 10s infinite;
+                    animation-delay: 3s;
+                    opacity: 0;
+
                 }
                 .prize_img {
                     height: 25rem;
@@ -72,10 +75,14 @@ section#prize {
         .container {
             .content {
                 flex-direction: column !important;
+                .change_prize_bober {
+                    top: 6rem !important;
+                }
             }
         }
         .prize_1 {
             max-height: 24rem !important;
+
         }
         .prize_3 {
             max-height: 35rem !important;
@@ -92,10 +99,27 @@ section#prize {
     0% {
         opacity: 1;
     }
-    50% {
+    20% {
         opacity: 0;
     }
-    100% {
+    55% {
+        opacity: 0;
+    }
+    60% {
         opacity: 1;
+    }
+}
+@keyframes BOBER {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
     }
 }

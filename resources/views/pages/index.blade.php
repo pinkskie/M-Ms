@@ -9,18 +9,6 @@
   </section>
 
   <section id="prize">
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="295.19" viewBox="0 0 1920 295.19" class="frame">
-          <defs>
-              <style>
-                  .cls-1 {
-                      fill: #fff;
-                      fill-rule: evenodd;
-                  }
-              </style>
-          </defs>
-          <path id="Rectangle_1_copy_2" data-name="rectangle" class="cls-1" d="M-18,712l978.8,86.068L1942,712v295.2H-18V712Z" transform="translate(0 -712)"/>
-      </svg> -->
-
       <div class="container">
       <h2 class="title">Торопись! В игре осталось:</h2>
       <div class="content">
@@ -45,10 +33,14 @@
                   <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>
                   <span class="size">7</span><span> красных <br/>s-призов</span>
               </p>
-              <div class="change_prize">
+              <div class="change_prize_VR">
                   <img src="/assets/prize3.png" alt="prize3" class="prize_img prize_3"/>
                   <p class="prize_name_3">Радужные глаза* </p>
                   <span class="product">*Playstation VR</span>
+              </div><div class="change_prize_bober">
+                  <img src="/assets/prize3_2.png" alt="prize3" class="prize_img prize_3"/>
+                  <p class="prize_name_3">Аудиобобер* </p>
+                  <span class="product">*Беспроводная колонка</span>
               </div>
           </div>
       </div>
@@ -67,9 +59,11 @@
           </p>
         </div>
         <div class="content">
-            <img src="/assets/green_phone_c.png" alt="" class="green_phone_candy"/>
-            <img src="/assets/blue_phone_c.png" alt="" class="blue_phone_candy"/>
           <img src="/assets/share2.png" alt="share2" class="share_img_2"/>
+          <img src="/assets/green_phone_c.png" alt="" class="green_phone_candy"/>
+          <img src="/assets/blue_phone_c.png" alt="" class="blue_phone_candy"/>
+          <img src="/assets/icons/animations/yellow_static.png" alt="" class="anim_phone_candy"/>
+          <img src="/assets/gift.png" alt="" class="gift"/>
             <p class="description description-2">
                 НЕ УПУСкай ЖЕЛТЫЕ ПРИЗОВЫЕ КОНФЕТЫ НА 2 И 3 УРОВНЯХ
             </p>
@@ -104,6 +98,7 @@
             <img src="/assets/icons/animations/share5_2.png" alt="" class="share5_2"/>
             <img src="/assets/icons/animations/share5_3.png" alt="" class="share5_3"/>
             <img src="/assets/icons/animations/share5_4.png" alt="" class="share5_4"/>
+
             <p class="description description-5">
               КРАСНЫЙ призовой SKITTLES® – ЭТО СУПЕРПРИЗ! ЛОВИ, ВНУТРИ АУДИБОБЕР* ИЛИ РАДУЖНЫЕ ГЛАЗА**!
             </p>
@@ -112,17 +107,6 @@
       </div>
       <button class="btn btn-danger">ПОГНАЛИ!</button>
     </div>
-{{--      <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="295.22" viewBox="0 0 1920 295.22" class="frame">--}}
-{{--          <defs>--}}
-{{--              <style>--}}
-{{--                  .cls-1 {--}}
-{{--                      fill: #fff;--}}
-{{--                      fill-rule: evenodd;--}}
-{{--                  }--}}
-{{--              </style>--}}
-{{--          </defs>--}}
-{{--          <path id="Rectangle_1_copy_4" data-name="rectangle2" class="cls-1" d="M-16,2563l978.8,86.07L1944,2563v295.2H-16V2563Z" transform="translate(0 -2563)"/>--}}
-{{--      </svg>--}}
   </section>
 
   <section id="winners">
@@ -222,6 +206,7 @@
                 <img src="/assets/yellow_winners_img.png" alt="yellow" class="yellow_img"/>
             </div>
         </div>
+        <img src="/assets/lentils.png" alt="" class="lentils"/>
         <p class="title">Торопись! В игре осталось:</p>
         <div class="prizes">
             <p class="amount-1">
@@ -230,11 +215,11 @@
             </p>
             <p class="amount-2">
                 <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>
-                <span class="size">7</span><span> красных <br/>призов</span>
+                <span class="size">7</span><span> красных <br/>M-призов</span>
             </p>
             <p class="amount-2">
                 <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>
-                <span class="size">7</span><span> красных <br/>призов</span>
+                <span class="size">7</span><span> красных <br/>S-призов</span>
             </p>
         </div>
         <button class="btn btn-danger">ПОГНАЛИ!</button>
@@ -252,8 +237,10 @@
           </p>
           <div class="faq">
             <div class="question">
-              <img src="/assets/M&MS.png" alt='M&MS' />
-              <h3>Когда можно играть?</h3>
+                <div>
+                  <img src="/assets/M&MS.png" alt='M&MS' />
+                  <h3>Когда можно играть?</h3>
+                </div>
               <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
                 <defs>
                 <style>
@@ -272,8 +259,10 @@
 
           <div class="faq">
               <div class="question">
-                  <img src="/assets/M&MS.png" alt='M&MS' />
-                  <h3>Как можно выиграть смартфон?</h3>
+                  <div>
+                    <img src="/assets/M&MS.png" alt='M&MS' />
+                    <h3>Как можно выиграть смартфон?</h3>
+                  </div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
                       <defs>
                           <style>
@@ -292,8 +281,10 @@
 
           <div class="faq">
               <div class="question">
-                  <img src="/assets/M&MS.png" alt='M&MS' />
-                  <h3>Что еще можно выиграть?</h3>
+                  <div>
+                      <img src="/assets/M&MS.png" alt='M&MS' />
+                      <h3>Что еще можно выиграть?</h3>
+                  </div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
                       <defs>
                           <style>
@@ -313,8 +304,10 @@
 
           <div class="faq">
             <div class="question">
-              <img src="/assets/M&MS.png" alt='M&MS' />
-              <h3>Не нашел ответ? Задай вопрос нам!</h3>
+                <div>
+                  <img src="/assets/M&MS.png" alt='M&MS' />
+                  <h3>Не нашел ответ? Задай вопрос нам!</h3>
+                </div>
               <svg xmlns="http://www.w3.org/2000/svg" width="15.469" height="14.59" viewBox="0 0 15.469 14.59">
                 <defs>
                 <style>

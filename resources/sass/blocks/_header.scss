@@ -32,5 +32,46 @@ header.header {
                }
            }
        }
+        .nav_2 {
+            justify-content: center;
+            gap: 2rem
+        }
    }
+}
+.header_mobile {
+    display: none;
+}
+
+@include responsive{
+    header.header {
+        display: none;
+    }
+    .header_mobile {
+        box-shadow: 0px 0px 25px 1px black;
+        display: inherit;
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row ;
+            padding:1rem;
+        }
+        .languages {
+            font-size: 3rem;
+            color: #552100;
+        }
+        .logo {
+            margin-right: 3rem;
+        }
+        .burger {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            span {
+                width: 4rem;
+                height: 0.4rem;
+                background-color: #552100;
+            }
+        }
+    }
 }

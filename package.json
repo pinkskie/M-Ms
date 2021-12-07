@@ -19,6 +19,7 @@
     },
     "dependencies": {
         "core-util-is": "^1.0.3",
+        "remodal": "^1.1.1",
         "sass": "^1.44.0",
         "webpack": "^5.64.4"
     }

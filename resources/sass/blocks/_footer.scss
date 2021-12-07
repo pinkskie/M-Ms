@@ -4,6 +4,8 @@ footer.footer {
     background-repeat: no-repeat;
     background-position: center;
     padding: 2rem 0 1rem 0;
+    position: relative;
+    bottom: 0;
     .content {
         display: flex;
         justify-content: space-between;

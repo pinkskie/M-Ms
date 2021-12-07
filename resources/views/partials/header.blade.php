@@ -12,12 +12,27 @@
                     </svg>
 {{--                </div>--}}
             </ul>
-            <ul class="nav">
+            <ul class="nav nav_2">
                 <li class="nav-link"><a href="#">Победители</a></li>
                 <li class="nav-link"><a href="#">FAQ</a></li>
-                <li class="nav-link"><a href="#">Личный кабинет</a></li>
+                <li class="nav-link"><a href="profile">Личный кабинет</a></li>
                 <li class="nav-link"><a href="#">RU | KZ</a></li>
             </ul>
+        </div>
+    </div>
+</header>
+
+<header class="header_mobile">
+    <div class="wrapper">
+        <div class="languages">
+            <a href="#">RU</a> |
+            <a href="#">KZ</a>
+        </div>
+        <img src="/assets/M&MS.png" class="logo"/>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </header>
