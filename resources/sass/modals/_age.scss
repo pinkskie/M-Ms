@@ -1,0 +1,69 @@
+.remodal[data-remodal-id=age] {
+    .remodal {
+        padding: 1rem;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .modal_frame {
+        margin-top: 2.5rem;
+    }
+    .modal_title_h2 {
+        margin-top: 0;
+    }
+    .faq.active .answer {
+        max-height: 50rem;
+        animation: fade 0.5s ease-in-out;
+    }
+    svg {
+        transition: transform 0.2s ease-in
+    }
+    .faq.active svg {
+        transform: rotate(0deg);
+        transition: all 0.5s;
+    }
+    .question  {
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+        gap: 1.5rem;
+        div {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        svg {
+            transform: rotate(-90deg);
+            margin-bottom: 1rem;
+        }
+        h3 {
+            color:#532f1c;
+            font-size: 2.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    .faq {
+        max-width: 86.5rem;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        cursor: pointer;
+    }
+    .answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        p {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #552100;
+            a {
+                border-bottom: 2px solid #552100;
+                cursor: pointer;
+            }
+        }
+    }
+}

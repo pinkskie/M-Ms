@@ -1,4 +1,400 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap);
+/*
+ *  Remodal - v1.1.1
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+
+/* Default theme styles for the background */
+
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+  filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.9);
+}
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+  -webkit-animation-name: remodal-overlay-opening-keyframes;
+  animation-name: remodal-overlay-opening-keyframes;
+}
+
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-name: remodal-overlay-closing-keyframes;
+  animation-name: remodal-overlay-closing-keyframes;
+}
+
+/* Default theme styles of the wrapper */
+
+.remodal-wrapper {
+  padding: 10px 10px 0;
+}
+
+/* Default theme styles of the modal dialog */
+
+.remodal {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 35px;
+  transform: translate3d(0, 0, 0);
+
+  color: #2b2e38;
+  background: #fff;
+}
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+  -webkit-animation-name: remodal-opening-keyframes;
+  animation-name: remodal-opening-keyframes;
+}
+
+.remodal.remodal-is-closing {
+  -webkit-animation-name: remodal-closing-keyframes;
+  animation-name: remodal-closing-keyframes;
+}
+
+/* Vertical align of the modal dialog */
+
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
+}
+
+/* Close button */
+
+.remodal-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  overflow: visible;
+
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.remodal-close:hover,
+.remodal-close:focus {
+  color: #2b2e38;
+}
+
+.remodal-close:before {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+  font-size: 25px;
+  line-height: 35px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 35px;
+
+  content: "\00d7";
+  text-align: center;
+}
+
+/* Dialog buttons */
+
+.remodal-confirm,
+.remodal-cancel {
+  font: inherit;
+
+  display: inline-block;
+  overflow: visible;
+
+  min-width: 110px;
+  margin: 0;
+  padding: 12px 0;
+
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  border: 0;
+  outline: 0;
+}
+
+.remodal-confirm {
+  color: #fff;
+  background: #81c784;
+}
+
+.remodal-confirm:hover,
+.remodal-confirm:focus {
+  background: #66bb6a;
+}
+
+.remodal-cancel {
+  color: #fff;
+  background: #e57373;
+}
+
+.remodal-cancel:hover,
+.remodal-cancel:focus {
+  background: #ef5350;
+}
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner,
+.remodal-close::-moz-focus-inner {
+  padding: 0;
+
+  border: 0;
+}
+
+/* Keyframes
+   ========================================================================== */
+
+@-webkit-keyframes remodal-opening-keyframes {
+  from {
+    transform: scale(1.05);
+
+    opacity: 0;
+  }
+  to {
+    transform: none;
+
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes remodal-opening-keyframes {
+  from {
+    transform: scale(1.05);
+
+    opacity: 0;
+  }
+  to {
+    transform: none;
+
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@-webkit-keyframes remodal-closing-keyframes {
+  from {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+
+    opacity: 0;
+    filter: blur(0);
+  }
+}
+
+@keyframes remodal-closing-keyframes {
+  from {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+
+    opacity: 0;
+    filter: blur(0);
+  }
+}
+
+@-webkit-keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media only screen and (min-width: 641px) {
+  .remodal {
+    max-width: 700px;
+  }
+}
+
+/* IE8
+   ========================================================================== */
+
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38;
+}
+
+.lt-ie9 .remodal {
+  width: 700px;
+}
+
+/*
+ *  Remodal - v1.1.1
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+
+/* Hide scroll bar */
+
+html.remodal-is-locked {
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id] {
+  display: none;
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+
+  display: none;
+}
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  overflow: auto;
+
+  text-align: center;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+
+  height: 100%;
+  margin-left: -0.05em;
+
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+  position: relative;
+
+  outline: none;
+
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+@charset "UTF-8";
 @font-face {
   font-family: "EBA-DINPro-CondensedBlack";
   src: url("/fonts/DINPro-CondensedBlack.woff2") format("woff2"), url("/fonts/DINPro-CondensedBlack.woff") format("woff"), url("/fonts/DINPro-CondensedBlack.ttf") format("truetype");
@@ -21,6 +417,7 @@ html {
   font-size: 10px;
   overflow-x: hidden;
   font-family: "EBA-DINPro-CondensedBold";
+  width: 100%;
 }
 
 body {
@@ -30,6 +427,7 @@ body {
   max-width: 100%;
   color: white;
   background-color: #ffcc00;
+  position: relative;
 }
 
 * {
@@ -123,7 +521,12 @@ p {
 
 @media only screen and (max-width: 562px) {
   .amount-1 {
-    padding-right: 1rem !important;
+    padding-right: 2rem !important;
+    height: 7rem !important;
+    max-width: 20rem;
+  }
+  .amount-1 .yellow_anim {
+    max-width: 16rem !important;
   }
   .amount-1 span:last-child {
     font-size: 2rem;
@@ -131,6 +534,12 @@ p {
 
   .amount-2 {
     padding-right: 2rem !important;
+    width: 16rem !important;
+    height: 7rem !important;
+  }
+  .amount-2 .red_anim {
+    left: -8rem;
+    max-width: 15rem !important;
   }
   .amount-2 span:last-child {
     font-size: 2rem;
@@ -157,23 +566,19 @@ p {
   }
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 1rem;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #552100;
   border-radius: 1rem;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -260,8 +665,7 @@ footer.footer {
   background-repeat: no-repeat;
   background-position: center;
   padding: 2rem 0 1rem 0;
-  position: relative;
-  bottom: 0;
+  width: 100%;
 }
 footer.footer .content {
   display: flex;
@@ -499,6 +903,10 @@ section#prize .container .content .prizes .product {
 @media screen and (max-width: 562px) {
   section#share {
     margin-top: 40rem !important;
+    overflow: hidden;
+  }
+  section#share .sharebg {
+    display: none;
   }
   section#share .title {
     margin-top: 2rem;
@@ -555,7 +963,7 @@ section#share:after {
   display: block;
   position: absolute;
   width: 100%;
-  height: 10rem;
+  height: 13rem;
   bottom: -8rem;
   left: 0;
   z-index: 2;
@@ -564,7 +972,7 @@ section#share:after {
 section#share .sharebg {
   position: absolute;
   width: 100%;
-  top: 15rem;
+  top: 6rem;
 }
 section#share .container .info {
   display: flex;
@@ -1090,15 +1498,15 @@ section#winners .container .form .form-group {
   align-items: center;
   position: relative;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   z-index: 1;
   margin-left: 2rem;
 }
 section#winners .container .form .form-group input {
   font-size: 3.2rem;
   margin-bottom: unset;
-  padding: 1.1rem 6rem;
-  width: 85%;
+  padding: 0rem 3rem;
+  width: 60%;
   border-radius: 1rem;
 }
 section#winners .container .form .form-group div .btn {
@@ -1108,17 +1516,17 @@ section#winners .container .form .form-group div .btn {
   border: unset;
   border-radius: 1rem;
   cursor: pointer;
-  height: 7.7rem;
+  height: 5.5rem;
+  width: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 9rem;
   transition: all 0.4s ease-in-out;
 }
 section#winners .container .form .form-group .btn .icon.search {
   background: url("/assets/icons/search_icon.png") 50%/contain no-repeat;
-  width: 5.6rem;
-  height: 5.6rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 section#winners .container .table {
   width: 86.5rem;
@@ -1240,6 +1648,12 @@ section#winners .container .btn-danger {
   section#winners {
     font-size: 0.5vmin !important;
   }
+  section#winners .winnersbg {
+    display: none;
+  }
+  section#winners .lentils {
+    display: none !important;
+  }
   section#winners .container .table {
     width: 100% !important;
   }
@@ -1261,10 +1675,12 @@ section#winners .container .btn-danger {
   section#winners .container .prizes {
     flex-wrap: wrap;
     justify-content: center !important;
-    gap: 3rem;
+    gap: 1rem;
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
   }
-  section#winners .container .prizes:first-child {
-    width: 100%;
+  section#winners .container .prizes_1 {
+    width: 100% !important;
   }
   section#winners .yellow_img {
     display: none !important;
@@ -1326,7 +1742,7 @@ section#FAQ .answer p {
   color: #532f1c;
   font-size: 2.2rem;
   font-weight: 700;
-  margin-left: 5.4rem;
+  margin-left: 6rem;
 }
 section#FAQ .form {
   display: flex;
@@ -1416,8 +1832,12 @@ section#FAQ .form .btn .btn-danger {
     height: 25rem !important;
   }
 
+  .answer p {
+    margin-left: 6.8rem !important;
+  }
+
   .question {
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
   }
 }
 @-webkit-keyframes fade {
@@ -1440,6 +1860,246 @@ section#FAQ .form .btn .btn-danger {
     transform: translateY(0rem);
   }
 }
+.remodal-close {
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  left: initial;
+  color: #552100;
+}
+
+.remodal {
+  background-color: #ffcc00;
+  max-width: 42rem;
+  width: 100%;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+}
+.remodal:before {
+  content: "";
+  background-image: url("/assets/light.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100rem;
+  left: 0rem;
+  position: absolute;
+  bottom: -10rem;
+  z-index: -1;
+}
+.remodal .modal_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.remodal .modal_title {
+  text-transform: uppercase;
+  color: #552100;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+}
+.remodal .modal_title_h2 {
+  text-transform: uppercase;
+  color: #552100;
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.remodal .modal_title_h3 {
+  text-transform: uppercase;
+  color: #552100;
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.remodal .modal_title_h3 span {
+  font-size: 3.7rem;
+}
+.remodal .modal_description {
+  font-size: 1.9rem;
+  color: #552100;
+  text-align: left;
+}
+.remodal .modal_description a {
+  border-bottom: 2px solid #552100;
+  cursor: pointer;
+}
+.remodal .modal_frame {
+  width: 100%;
+  height: 2rem;
+}
+.remodal .modal_input {
+  font-family: "EBA-DINPro-CondensedBlack", sans-serif;
+  font-size: 2.4rem;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  max-width: 35rem;
+  width: 100%;
+}
+.remodal .modal_input::-moz-placeholder {
+  color: #b8b8b8;
+}
+.remodal .modal_input:-ms-input-placeholder {
+  color: #b8b8b8;
+}
+.remodal .modal_input::placeholder {
+  color: #b8b8b8;
+}
+.remodal .btn-danger {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  background-color: #ff000a;
+  box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.3);
+  min-width: 16rem;
+}
+.remodal .btn-again {
+  font-size: 2.5rem;
+  max-width: 35rem;
+  min-width: 16rem;
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.8rem 0;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid #552100;
+  text-transform: uppercase;
+  color: #552100;
+}
+.remodal .btn-again:disabled {
+  opacity: 0.6;
+}
+
+.remodal[data-remodal-id=password_recovery01] .btn-danger {
+  max-width: 35rem;
+  width: 100%;
+  font-size: 3.3rem;
+}
+.remodal[data-remodal-id=password_recovery01] .modal_frame {
+  margin: 3rem auto;
+}
+
+.remodal[data-remodal-id=password_recovery02] .modal_input {
+  width: 29rem;
+}
+.remodal[data-remodal-id=password_recovery02] .btn-danger {
+  width: 23rem;
+  font-size: 3.2rem;
+}
+.remodal[data-remodal-id=password_recovery02] .btn-again {
+  max-width: 29rem;
+}
+.remodal[data-remodal-id=password_recovery02] .modal_frame {
+  margin: 3rem auto;
+}
+
+.remodal[data-remodal-id=legal] .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.remodal[data-remodal-id=age] .remodal {
+  padding: 1rem;
+}
+.remodal[data-remodal-id=age] .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.remodal[data-remodal-id=age] .modal_frame {
+  margin-top: 2.5rem;
+}
+.remodal[data-remodal-id=age] .modal_title_h2 {
+  margin-top: 0;
+}
+.remodal[data-remodal-id=age] .faq.active .answer {
+  max-height: 50rem;
+  -webkit-animation: fade 0.5s ease-in-out;
+          animation: fade 0.5s ease-in-out;
+}
+.remodal[data-remodal-id=age] svg {
+  transition: transform 0.2s ease-in;
+}
+.remodal[data-remodal-id=age] .faq.active svg {
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+.remodal[data-remodal-id=age] .question {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  gap: 1.5rem;
+}
+.remodal[data-remodal-id=age] .question div {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.remodal[data-remodal-id=age] .question svg {
+  transform: rotate(-90deg);
+  margin-bottom: 1rem;
+}
+.remodal[data-remodal-id=age] .question h3 {
+  color: #532f1c;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.remodal[data-remodal-id=age] .faq {
+  max-width: 86.5rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+.remodal[data-remodal-id=age] .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.remodal[data-remodal-id=age] .answer p {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #552100;
+}
+.remodal[data-remodal-id=age] .answer p a {
+  border-bottom: 2px solid #552100;
+  cursor: pointer;
+}
+
+.remodal[data-remodal-id=ivy] .modal_description {
+  font-size: 2.2rem;
+}
+.remodal[data-remodal-id=ivy] .wrapper {
+  text-align: left;
+  position: relative;
+}
+.remodal[data-remodal-id=ivy] .wrapper .modal_list {
+  font-size: 2rem;
+  color: #552100;
+}
+.remodal[data-remodal-id=ivy] .wrapper .modal_list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+.remodal[data-remodal-id=ivy] .wrapper .modal_description {
+  font-size: 1.9rem;
+  color: #552100;
+  text-align: left;
+  text-decoration: none;
+}
+.remodal[data-remodal-id=ivy] .wrapper .modal_description a {
+  border-bottom: 2px solid #552100;
+  cursor: pointer;
+}
+
 section#profile {
   background-color: #ffcc00;
   position: relative;
@@ -1634,20 +2294,96 @@ section#profile .content-2 {
   margin-bottom: 4rem;
 }
 
+@media screen and (max-width: 562px) {
+  .frame_register {
+    width: 100%;
+  }
+
+  .yellow_register {
+    display: none !important;
+  }
+
+  .register_again {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1336px) and (max-width: 1440px) {
+  .yellow_register {
+    left: 30rem !important;
+    max-width: 28rem !important;
+    top: 9.1rem !important;
+  }
+}
+section#registration {
+  position: relative;
+}
+section#registration .frame_register {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+section#registration .yellow_register {
+  position: absolute;
+  left: 40rem;
+  top: 8.1rem;
+  max-width: 30rem;
+}
 section#registration .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
-section#registration .description {
-  font-size: 2.5rem;
+section#registration .wrapper .description {
+  font-size: 2.8rem;
   text-align: center;
   color: #552100;
 }
-section#registration .description span {
+section#registration .wrapper .description span {
   font-size: 3.3rem;
 }
-section#registration .description .register_form input {
-  width: 30rem;
+section#registration .wrapper .register_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+section#registration .wrapper .register_form input {
+  width: 25rem;
+  border-radius: 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+section#registration .wrapper .register_form input:focus {
+  outline: none;
+}
+section#registration .wrapper .register_form .btn-danger {
+  width: 20rem;
+  height: 6rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  background-color: #ff000a;
+  border-radius: 1.8rem;
+  outline: none;
+  border: none;
+  box-shadow: 0px 7px 20px 2px rgba(0, 0, 0, 0.7);
+  display: block;
+  margin: 2rem auto;
+}
+section#registration .wrapper .register_again {
+  margin-top: 12rem;
+}
+section#registration .wrapper .register_again .btn-again {
+  display: block;
+  margin: 0 auto;
+  font-size: 2.8rem;
+  color: #552100;
+  text-transform: uppercase;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #552100;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  padding: 0.5rem 3rem;
 }

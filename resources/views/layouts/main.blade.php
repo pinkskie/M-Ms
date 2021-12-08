@@ -24,6 +24,7 @@
     @include('partials.header')
     @yield('content')
     @include('partials.footer')
+    @include('partials.modals')
     <script src="{{ mix('js/app.js') }}"></script>
 
   </body>

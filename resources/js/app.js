@@ -1,3 +1,6 @@
+window.$ = window.jQuery = require('jquery');
+require('remodal');
+
 const faqs = document.querySelectorAll('.faq')
 let winner_yellow = document.querySelector('.yellow')
 let winner_red = document.querySelector('.red')

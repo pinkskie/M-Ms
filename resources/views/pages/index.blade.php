@@ -12,7 +12,7 @@
       <div class="container">
       <h2 class="title">Торопись! В игре осталось:</h2>
       <div class="content">
-          <div class="prizes">
+          <div class="prizes prizes_1">
               <p class="amount-1">
                   <img src="/assets/icons/animations/yellow_anim.png" alt="" class="yellow_anim"/>
                   <span class="size">5880</span><span> желтых <br/>призов</span>

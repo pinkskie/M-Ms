@@ -1,0 +1,109 @@
+.remodal-close {
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    left: initial;
+    color: #552100;
+}
+.remodal {
+    background-color: #ffcc00;
+    max-width: 42rem;
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem;
+    &:before {
+        content: '';
+        background-image: url("/assets/light.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100rem;
+        left: 0rem;
+        position: absolute;
+        bottom: -10rem;
+        z-index: -1;
+    }
+    .modal_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .modal_title {
+        text-transform: uppercase;
+        color: #552100;
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+    }
+    .modal_title_h2 {
+        text-transform: uppercase;
+        color: #552100;
+        font-size: 3.2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+
+    }
+    .modal_title_h3 {
+        text-transform: uppercase;
+        color: #552100;
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        span {
+            font-size: 3.7rem;
+        }
+    }
+    .modal_description {
+        font-size: 1.9rem;
+        color: #552100;
+        text-align: left;
+        a {
+            border-bottom: 2px solid #552100;
+            cursor: pointer;
+        }
+    }
+    .modal_frame {
+
+        width: 100%;
+        height: 2rem;
+    }
+    .modal_input {
+        font-family: 'EBA-DINPro-CondensedBlack', sans-serif;
+        font-size: 2.4rem;
+        border-radius: 1rem;
+        padding: 1rem 1rem;
+        max-width: 35rem;
+        width: 100%;
+        &::placeholder {
+            color: #b8b8b8
+        }
+    }
+    .btn-danger {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        padding: 1rem 4rem;
+        border-radius: 2rem;
+        background-color: #ff000a;
+        box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, .3);
+        min-width: 16rem;
+
+    }
+    .btn-again {
+        font-size: 2.5rem;
+        max-width: 35rem;
+        min-width: 16rem;
+        width: 100%;
+        border-radius: 2rem;
+        padding: 0.8rem 0;
+        outline: none;
+        background-color: transparent;
+        border: 2px solid #552100;
+        text-transform: uppercase;
+        color: #552100;
+        &:disabled {
+            opacity: .6;
+        }
+    }
+}

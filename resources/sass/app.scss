@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
-
+@import "~remodal/dist/remodal-default-theme.css";
+@import "~remodal/dist/remodal.css";
 @import "helpers/fonts";
 
 html {
     font-size: 10px;
     overflow-x: hidden;
     font-family: 'EBA-DINPro-CondensedBold';
+    width: 100%;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
     max-width:100%;
     color: white;
     background-color: #ffcc00;
+    position: relative;
     //overflow-x: hidden;
 }
 
@@ -105,7 +108,12 @@ p {
 }
 @media only screen and (max-width: 562px) {
     .amount-1 {
-        padding-right: 1rem !important;
+        padding-right: 2rem !important;
+        height: 7rem !important;
+        max-width: 20rem;
+        .yellow_anim {
+            max-width: 16rem !important;
+        }
         span {
             &:last-child {
                 font-size: 2rem;
@@ -114,6 +122,12 @@ p {
     }
     .amount-2 {
         padding-right: 2rem !important;
+        width: 16rem !important;
+        height: 7rem !important;
+        .red_anim {
+            left: -8rem;
+            max-width: 15rem !important;
+        }
         span {
             &:last-child {
                 font-size: 2rem;
@@ -126,7 +140,6 @@ p {
         font-size: 9px;
     }
 }
-
 @media only screen and (max-width: 1366px) {
     html{
         font-size: 8px;
@@ -135,7 +148,6 @@ p {
         //overflow-x: scroll;
     }
 }
-
 @mixin responsive {
     @media only screen and (max-width: 1200px) {
         @content;
@@ -147,7 +159,6 @@ p {
         @content;
     }
 }
-
 .container {
     margin: 0 auto;
     position: relative;
@@ -156,23 +167,16 @@ p {
         width: 95vmin;
     }
 }
-/* width */
 ::-webkit-scrollbar {
     width: 1rem;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #552100;
     border-radius: 1rem;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
@@ -183,5 +187,16 @@ p {
 @import "blocks/share";
 @import "blocks/winners";
 @import "blocks/faq";
+
+@import "helpers/modals";
+
+@import "modals/register";
+@import "modals/passwordRecovery01";
+@import "modals/passwordRecovery02";
+@import "modals/faq-sent";
+@import "modals/legal";
+@import "modals/age";
+@import "modals/ivy";
+
 @import "pages/profile";
 @import "pages/registration";
