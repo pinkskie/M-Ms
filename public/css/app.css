@@ -448,6 +448,10 @@ p {
   margin: 0;
 }
 
+a:hover {
+  color: inherit;
+}
+
 .title {
   font-size: 5.2rem;
   color: #552100;
@@ -666,6 +670,18 @@ footer.footer {
   background-position: center;
   padding: 2rem 0 1rem 0;
   width: 100%;
+  position: relative;
+}
+footer.footer:before {
+  content: "";
+  background-image: url("/assets/zigzag.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
 }
 footer.footer .content {
   display: flex;
@@ -988,6 +1004,18 @@ section#share .container .info .content {
   overflow: hidden;
   border-radius: 1rem;
 }
+section#share .container .info .content:before {
+  content: "";
+  background-image: url("/assets/light.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -4rem;
+  left: -12rem;
+  z-index: -1;
+  width: 160%;
+  height: 100%;
+}
 section#share .container .info .content .share_img_1 {
   width: 100%;
   position: relative;
@@ -1131,8 +1159,23 @@ section#share .container .info_2 .content {
   overflow: hidden;
   border-radius: 1rem;
 }
+section#share .container .info_2 .content:before {
+  content: "";
+  background-image: url("/assets/light.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -4rem;
+  left: -12rem;
+  z-index: -1;
+  width: 160%;
+  height: 100%;
+}
 section#share .container .info_2 .content:last-child {
   overflow: inherit;
+}
+section#share .container .info_2 .content:last-child:before {
+  background-image: none;
 }
 section#share .container .info_2 .content .share_img_4 {
   width: 70%;
@@ -1479,7 +1522,13 @@ section#winners {
   position: relative;
   width: 100%;
 }
-section#winners .title {
+section#winners .winners_title {
+  font-size: 5.2rem;
+  color: #552100;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "EBA-DINPro-CondensedBlack";
   margin-top: 10rem;
 }
 section#winners .winnersbg {
@@ -1531,11 +1580,47 @@ section#winners .container .form .form-group .btn .icon.search {
 section#winners .container .table {
   width: 86.5rem;
   margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+section#winners .container .table:after {
+  content: "";
+  background-image: url("/assets/light.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: -53rem;
+  z-index: -1;
+  width: 90%;
+  height: 100%;
+}
+section#winners .container .table:before {
+  content: "";
+  background-image: url("/assets/light.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: -53rem;
+  z-index: -1;
+  width: 90%;
+  height: 100%;
 }
 section#winners .container .table .table_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+section#winners .container .table .table_nav:after {
+  content: "";
+  position: absolute;
+  width: 2.6rem;
+  height: 0.1rem;
+  background-color: white;
+  bottom: 0;
+  left: 48.5%;
 }
 section#winners .container .table .table_nav .winners {
   text-transform: uppercase;
@@ -1590,16 +1675,22 @@ section#winners .container .table .table_head {
   padding-top: 1rem;
   border-right: 1px solid white;
   border-left: 1px solid white;
+  border-bottom: 1px solid white;
 }
 section#winners .container .table .table_head > div {
   text-transform: uppercase;
   font-weight: 700;
 }
+section#winners .container .table .table_head.red {
+  background-color: #ff000a;
+}
+section#winners .container .table .table_head.yellow {
+  background-color: inherit;
+}
 section#winners .container .table .table_data {
   border-right: 1px solid white;
   border-left: 1px solid white;
   position: relative;
-  margin-bottom: 10rem;
 }
 section#winners .container .table .table_data .table_body .rows {
   display: flex;
@@ -1615,11 +1706,21 @@ section#winners .container .table .table_data .yellow_img {
   max-width: 28rem;
   left: -19.2rem;
 }
+section#winners .container .table .pagination {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #552100;
+}
 section#winners .container .lentils {
   position: absolute;
   max-width: 10rem;
   right: 4rem;
-  bottom: 30rem;
+  bottom: 25%;
+  z-index: 1;
 }
 section#winners .container .title {
   font-size: 4.3rem;
@@ -1630,6 +1731,17 @@ section#winners .container .prizes {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+section#winners .container .prizes:before {
+  content: "";
+  background-image: url("/assets/light.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 5rem;
+  z-index: -1;
+  width: 90%;
+  height: 100%;
 }
 section#winners .container .btn-danger {
   width: 32rem;
@@ -2143,14 +2255,14 @@ section#profile .user:after {
   z-index: 1;
   background: url("/assets/frame.png") center center/cover no-repeat;
 }
-section#profile .content {
+section#profile .profile_content {
   display: flex;
   justify-content: center;
   gap: 5rem;
   align-items: center;
   margin-bottom: 5rem;
 }
-section#profile .content .prizes {
+section#profile .profile_content .prizes {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2158,34 +2270,45 @@ section#profile .content .prizes {
   align-items: center;
   position: relative;
 }
-section#profile .content .prizes:last-child {
+section#profile .profile_content .prizes .swiper-btn-next {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+}
+section#profile .profile_content .prizes .swiper-btn-prev {
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  transform: rotate(180deg);
+}
+section#profile .profile_content .prizes:last-child {
   gap: 1rem;
 }
-section#profile .content .prizes .amount-1 {
+section#profile .profile_content .prizes .amount-1 {
   max-width: 18rem;
   max-height: 5.3rem;
   padding-right: 2rem;
 }
-section#profile .content .prizes .amount-1 .yellow_anim {
+section#profile .profile_content .prizes .amount-1 .yellow_anim {
   max-width: 14rem;
   left: -6rem;
 }
-section#profile .content .prizes .amount-2 {
+section#profile .profile_content .prizes .amount-2 {
   max-width: 13rem;
   max-height: 5.3rem;
   padding-right: 1rem;
 }
-section#profile .content .prizes .amount-2 .red_anim {
+section#profile .profile_content .prizes .amount-2 .red_anim {
   max-width: 11rem;
   left: -5rem;
 }
-section#profile .content .prizes .change_prize_VR {
+section#profile .profile_content .prizes .change_prize_VR {
   -webkit-animation: VR 10s infinite;
           animation: VR 10s infinite;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
-section#profile .content .prizes .change_prize_bober {
+section#profile .profile_content .prizes .change_prize_bober {
   position: absolute;
   top: 11rem;
   -webkit-animation: BOBER 10s infinite;
@@ -2194,20 +2317,20 @@ section#profile .content .prizes .change_prize_bober {
           animation-delay: 3s;
   opacity: 0;
 }
-section#profile .content .prizes .prize_img {
+section#profile .profile_content .prizes .prize_img {
   height: 18rem;
 }
-section#profile .content .prizes .prize_img.prize_3 {
+section#profile .profile_content .prizes .prize_img.prize_3 {
   height: 24rem;
   margin-bottom: 4rem;
 }
-section#profile .content .prizes .prize_name {
+section#profile .profile_content .prizes .prize_name {
   font-size: 3.2rem;
   font-weight: 700;
   color: #552100;
   text-transform: uppercase;
 }
-section#profile .content .prizes .prize_name_3 {
+section#profile .profile_content .prizes .prize_name_VR {
   font-size: 3.2rem;
   font-weight: 700;
   color: #fff254;
@@ -2217,7 +2340,17 @@ section#profile .content .prizes .prize_name_3 {
   position: absolute;
   bottom: 2rem;
 }
-section#profile .content .prizes .product {
+section#profile .profile_content .prizes .prize_name_bober {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff254;
+  background-color: #7f3489;
+  padding: 0 2.5rem;
+  transform: skew(14deg, -10deg);
+  position: absolute;
+  bottom: 2rem;
+}
+section#profile .profile_content .prizes .product {
   position: absolute;
   bottom: 0;
   color: #552100;
@@ -2295,6 +2428,74 @@ section#profile .content-2 {
 }
 
 @media screen and (max-width: 562px) {
+  .content-2 {
+    flex-wrap: wrap;
+    row-gap: 1rem !important;
+    -moz-column-gap: 4rem !important;
+         column-gap: 4rem !important;
+  }
+  .content-2 .prizes:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rows {
+    gap: 1.5rem;
+  }
+
+  .profile_content {
+    -moz-column-gap: 2rem !important;
+         column-gap: 2rem !important;
+    row-gap: 7rem !important;
+    flex-wrap: wrap;
+    margin-top: 5rem !important;
+  }
+  .profile_content .prize_name {
+    font-size: 2rem !important;
+    order: 3;
+  }
+  .profile_content .prize_1 {
+    order: 3;
+  }
+  .profile_content .prize_2 {
+    order: 1;
+    height: 15rem !important;
+  }
+  .profile_content .prize_3 {
+    order: 2;
+    height: 19rem !important;
+  }
+  .profile_content .prize_3 .prize_name_3 {
+    font-size: 2rem !important;
+    padding: 0 0.5rem !important;
+  }
+  .profile_content .prize_name_VR {
+    font-size: 2rem !important;
+    padding: 0 1.5rem !important;
+    bottom: -3rem !important;
+    left: 3rem;
+  }
+  .profile_content .prize_name_bober {
+    font-size: 2.2rem !important;
+    padding: 0 1.5rem !important;
+    bottom: 5rem !important;
+    left: 2.5rem !important;
+  }
+  .profile_content .change_prize_bober {
+    top: 4rem !important;
+  }
+  .profile_content .product_VR {
+    bottom: -6rem !important;
+  }
+  .profile_content .swiper-btn-next {
+    right: -2rem !important;
+  }
+  .profile_content .swiper-btn-prev {
+    left: -4rem !important;
+  }
+}
+@media screen and (max-width: 562px) {
   .frame_register {
     width: 100%;
   }
@@ -2316,6 +2517,7 @@ section#profile .content-2 {
 }
 section#registration {
   position: relative;
+  margin-bottom: 5.4rem;
 }
 section#registration .frame_register {
   position: absolute;

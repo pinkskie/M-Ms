@@ -37,7 +37,11 @@ h2 {
 p {
     margin: 0;
 }
-
+a {
+    &:hover {
+        color: inherit;
+    }
+}
 .title {
     font-size: 5.2rem;
     color: #552100;

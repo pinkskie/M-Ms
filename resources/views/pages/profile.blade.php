@@ -9,8 +9,18 @@
 {{--    </div>--}}
 {{--    <div class="prizes">--}}
 {{--        <p class="title ">Торопись! В игре осталось:</p>--}}
-{{--        <div class="content">--}}
-{{--            <div class="prizes">--}}
+{{--        <div class="profile_content">--}}
+{{--            <div class="prizes prize_1">--}}
+{{--                <div class="swiper-btn-next">--}}
+{{--                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="25" viewBox="0 0 15 25">--}}
+{{--                        <image id="next" width="15" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAZCAYAAADuWXTMAAABD0lEQVQ4jZXUsUtCURTH8W9PGiR4qw2NgdDS0BBJEDhkgThUuwT1D/T3BKJzOIigNQgiGA5OTYF/hYuDSxy5Fx7Xe273nuU97j2f3xvevefg8fzkFOgBV8Av8ArMiKgM6BooVQU+gXosrjlrZWAYEyB45Vm3AW7wHn4BNkrACLgM4SnQVAJy4EsLyMxzAjwA25SArPA+Bp5SAjKnaZAS4OKkAB+ODbjQcExAp3R2nAf87qwfAdeevUroy1It4E3Z+wlhgR/AoWdvDTxr+D94Cyx9OAYu8PyqaOjiuxRYxHLx+ynQ4htz8csp0OJ3Bcr9vtegxTI9fVAGxFyDFrsNFsqACJbgNvBtuuQsN2IgwB/wb0HrSehy+QAAAABJRU5ErkJggg=="/>--}}
+{{--                    </svg>--}}
+{{--                </div>--}}
+{{--                <div class="swiper-btn-prev">--}}
+{{--                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="25" viewBox="0 0 15 25">--}}
+{{--                        <image id="next" width="15" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAZCAYAAADuWXTMAAABD0lEQVQ4jZXUsUtCURTH8W9PGiR4qw2NgdDS0BBJEDhkgThUuwT1D/T3BKJzOIigNQgiGA5OTYF/hYuDSxy5Fx7Xe273nuU97j2f3xvevefg8fzkFOgBV8Av8ArMiKgM6BooVQU+gXosrjlrZWAYEyB45Vm3AW7wHn4BNkrACLgM4SnQVAJy4EsLyMxzAjwA25SArPA+Bp5SAjKnaZAS4OKkAB+ODbjQcExAp3R2nAf87qwfAdeevUroy1It4E3Z+wlhgR/AoWdvDTxr+D94Cyx9OAYu8PyqaOjiuxRYxHLx+ynQ4htz8csp0OJ3Bcr9vtegxTI9fVAGxFyDFrsNFsqACJbgNvBtuuQsN2IgwB/wb0HrSehy+QAAAABJRU5ErkJggg=="/>--}}
+{{--                    </svg>--}}
+{{--                </div>--}}
 {{--                <p class="amount-1">--}}
 {{--                    <img src="/assets/icons/animations/yellow_anim.png" alt="" class="yellow_anim"/>--}}
 {{--                    <span class="size">5880</span><span> желтых <br/>призов</span>--}}
@@ -18,7 +28,7 @@
 {{--                <img src="/assets/prize1.png" alt="prize1" class="prize_img prize_1"/>--}}
 {{--                <p class="prize_name">Эл.сертификат IVI 3 месяца</p>--}}
 {{--            </div>--}}
-{{--            <div class="prizes">--}}
+{{--            <div class="prizes prize_2">--}}
 {{--                <p class="amount-2">--}}
 {{--                    <span class="size">7</span><span> красных <br/>m-призов</span>--}}
 {{--                    <img src="/assets/icons/animations/red_anim.png" alt="" class="red_anim"/>--}}
@@ -33,12 +43,12 @@
 {{--                </p>--}}
 {{--                <div class="change_prize_VR">--}}
 {{--                    <img src="/assets/prize3.png" alt="prize3" class="prize_img prize_3"/>--}}
-{{--                    <p class="prize_name_3">Радужные глаза* </p>--}}
-{{--                    <span class="product">*Playstation VR</span>--}}
+{{--                    <p class="prize_name_VR">Радужные глаза* </p>--}}
+{{--                    <span class="product product_VR">*Playstation VR</span>--}}
 {{--                </div><div class="change_prize_bober">--}}
 {{--                    <img src="/assets/prize3_2.png" alt="prize3" class="prize_img prize_3"/>--}}
-{{--                    <p class="prize_name_3">Аудиобобер* </p>--}}
-{{--                    <span class="product">*Беспроводная колонка</span>--}}
+{{--                    <p class="prize_name_bober">Аудиобобер* </p>--}}
+{{--                    <span class="product product_bober">*Беспроводная колонка</span>--}}
 {{--                </div>--}}
 {{--            </div>--}}
 {{--        </div>--}}

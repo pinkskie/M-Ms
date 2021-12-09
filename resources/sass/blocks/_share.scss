@@ -81,6 +81,18 @@ section#share {
         position: relative;
         overflow: hidden;
         border-radius: 1rem;
+          &:before {
+              content: '';
+              background-image: url("/assets/light.png");
+              background-size: cover;
+              background-position: center;
+              position: absolute;
+              top: -4rem;
+              left: -12rem;
+              z-index: -1;
+              width: 160%;
+              height: 100%;
+          }
         .share_img_1 {
             width: 100%;
             position: relative;
@@ -220,14 +232,30 @@ section#share {
               position: relative;
               overflow: hidden;
               border-radius: 1rem;
+              &:before {
+                  content: '';
+                  background-image: url("/assets/light.png");
+                  background-size: cover;
+                  background-position: center;
+                  position: absolute;
+                  top: -4rem;
+                  left: -12rem;
+                  z-index: -1;
+                  width: 160%;
+                  height: 100%;
+              }
               &:last-child {
                   overflow: inherit;
+                  &:before {
+                      background-image: none;
+                  }
               }
               .share_img_4 {
                   width: 70%;
                   position: relative;
                   left: 4rem;
                   top: 2rem;
+
               }
               .share_img_5 {
                   width: 100%;

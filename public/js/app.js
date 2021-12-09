@@ -12,16 +12,23 @@ window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 __webpack_require__(/*! remodal */ "./node_modules/remodal/dist/remodal.js");
 
 var faqs = document.querySelectorAll('.faq');
-var winner_yellow = document.querySelector('.yellow');
-var winner_red = document.querySelector('.red');
+var winner_yellow = document.querySelector('#table_yellow');
+var winner_red = document.querySelector('#table_red');
+var table_head = document.querySelector('.table_head');
+console.log(table_head);
 console.log(winner_yellow);
-winner_yellow = addEventListener('click', function () {
-  winner_yellow.classList.add('active');
-  winner_red.classList.remove('active');
-});
-winner_red = addEventListener('click', function () {
+console.log(winner_red);
+winner_yellow.addEventListener('click', function () {
   winner_red.classList.add('active');
+  table_head.classList.add('yellow');
+  table_head.classList.remove('red');
   winner_yellow.classList.remove('active');
+});
+winner_red.addEventListener('click', function () {
+  winner_yellow.classList.add('active');
+  table_head.classList.add('red');
+  table_head.classList.remove('yellow');
+  winner_red.classList.remove('active');
 });
 faqs.forEach(function (faq) {
   faq.addEventListener('click', function () {
